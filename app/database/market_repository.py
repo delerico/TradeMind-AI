@@ -78,6 +78,18 @@ class MarketDataRepository:
 
         return list(self._session.execute(statement).scalars().all())
 
+    def get_existing_dates(self, symbol: str) -> set[datetime]:
+        """
+        Return all existing dates for a symbol.
+        """
+        symbol = symbol.strip().upper()
+
+        statement = select(MarketData.date).where(
+            MarketData.symbol == symbol
+        )
+
+        return set(self._session.execute(statement).scalars().all())
+
     def exists(self, symbol: str, date: datetime) -> bool:
         """
         Check whether a record already exists.
