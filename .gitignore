@@ -1,31 +1,79 @@
+# ==========================
 # Python
+# ==========================
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
+*.so
 
-# Virtual Environment
-venv/
+# ==========================
+# Virtual Environments
+# ==========================
 .venv/
+venv/
 env/
 
-# VSCode
+# ==========================
+# IDE
+# ==========================
 .vscode/
-
-# PyCharm
 .idea/
 
-# macOS
+# ==========================
+# OS
+# ==========================
 .DS_Store
+Thumbs.db
 
+# ==========================
+# Testing
+# ==========================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==========================
+# Type Checking
+# ==========================
+.mypy_cache/
+.pyright/
+
+# ==========================
 # Logs
+# ==========================
 *.log
 
-# Database
-*.db
-
-# Environment
+# ==========================
+# Environment Variables
+# ==========================
 .env
+.env.*
 
+# ==========================
+# Databases
+# ==========================
+*.db
+*.sqlite3
+
+# Se vuoi mantenere la cartella data nel repository
+!data/
+!data/.gitkeep
+
+# ==========================
 # Jupyter
+# ==========================
 .ipynb_checkpoints/
+
+# ==========================
+# Build
+# ==========================
+build/
+dist/
+*.egg-info/
+
+# ==========================
+# Temporary Files
+# ==========================
+*.tmp
+*.bak
